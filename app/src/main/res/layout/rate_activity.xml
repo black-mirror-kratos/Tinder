@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="300dp"
+        android:layout_height="330dp"
+        card_view:cardCornerRadius="4dp">
+
+        <ImageView
+            android:layout_width="280dp"
+            android:layout_height="300dp"
+            android:id="@+id/ratable"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/info_text"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+    </android.support.v7.widget.CardView>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/numrating"
+        android:layout_gravity="center_horizontal"
+        android:text="5.0"
+        android:textSize="100dp"
+        android:textColor="@android:color/holo_green_dark" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rating"
+        android:max="100"
+        android:indeterminate="false"
+        android:progress="1" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="142dp"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:id="@+id/next"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/abc_btn_borderless_material"
+            android:textStyle="bold|italic"
+            android:textSize="25dp"
+            android:nestedScrollingEnabled="false"
+            android:onClick="nextButtonClick"
+            android:layout_weight="50" />
+
+        <Button
+            android:layout_width="142dp"
+            android:layout_height="wrap_content"
+            android:text="skip"
+            android:id="@+id/skip"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/abc_btn_borderless_material"
+            android:textStyle="bold|italic"
+            android:textSize="25dp"
+            android:nestedScrollingEnabled="false"
+            android:onClick="skipButtonClick"
+            android:layout_weight="50" />
+    </LinearLayout>
+
+</LinearLayout>
